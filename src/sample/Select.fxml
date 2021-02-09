@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Select">
+    <children>
+        <ListView fx:id="programListView" layoutX="26.0" layoutY="63.0" prefHeight="412.0" prefWidth="904.0" />
+        <Label layoutX="26.0" layoutY="24.0" text="Select a program to execute:" />
+        <Button fx:id="executeButton" layoutX="480.0" layoutY="500.0" text="Execute" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000"
+            prefWidth="2000" fx:controller="sample.Runform"
+            xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <HBox layoutX="5" layoutY="5">
+            <children>
+                <Label>Number of Prg States</Label>
+                <TextField fx:id="PrgStateCount" editable="false"/>
+            </children>
+        </HBox>
+
+        <Label layoutX="5" layoutY="35">Heap Table</Label>
+        <TableView layoutX="5" layoutY="65" prefWidth="179" fx:id="TableViewHeap">
+            <columns>
+                <TableColumn fx:id="ColumnHeapAdress" prefWidth="84.0" text="Address"/>
+                <TableColumn fx:id="ColumnHeapValue" prefWidth="95.0" text="Value"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="250" layoutY="35" fx:id="OutTableLabel">Out table</Label>
+        <ListView layoutX="250" layoutY="65" prefWidth="250" fx:id="OutTableContent">
+        </ListView>
+
+        <Label layoutX="550" layoutY="35" fx:id="FileTableId">File table</Label>
+        <ListView layoutX="550" layoutY="65" prefWidth="250" fx:id="FileTableContent">
+        </ListView>
+
+        <Label layoutX="5" layoutY="500" fx:id="PrgStateIds" prefWidth="150">PrgStateIds</Label>
+        <ListView layoutX="5" layoutY="530" prefWidth="150" fx:id="PrgStateIdsContent">
+        </ListView>
+
+        <Label layoutX="200" layoutY="500">Symbol Table</Label>
+        <TableView layoutX="200" layoutY="530" prefWidth="379" fx:id="SymTableView">
+            <columns>
+                <TableColumn fx:id="SymTableNames" prefWidth="184.0" text="Address"/>
+                <TableColumn fx:id="SymTableValues" prefWidth="195.0" text="Value"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="850" layoutY="35">Semaphore Table</Label>
+        <TableView layoutX="850" layoutY="65" prefWidth="300" fx:id="SemaphoreTableView">
+            <columns>
+                <TableColumn fx:id="SemaphoreIndex" prefWidth="100" text="Index"/>
+                <TableColumn fx:id="SemaphoreValues" prefWidth="100" text="Values"/>
+                <TableColumn fx:id="SemaphoreLists" prefWidth="100" text="Lists"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="1200" layoutY="35">Lock Table</Label>
+        <TableView layoutX="1200" layoutY="65" prefWidth="200" fx:id="LockTableView">
+            <columns>
+                <TableColumn fx:id="LockIndex" prefWidth="100" text="Location"/>
+                <TableColumn fx:id="LockValues" prefWidth="100" text="Values"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="600" layoutY="500" fx:id="ExeStackLabel" >ExeStack</Label>
+        <ListView layoutX="600" layoutY="530" prefWidth="600" fx:id="ExeStackView">
+        </ListView>
+
+        <Button  layoutX="1250" layoutY="800" fx:id="OneStepButton"> Run One Step</Button>
+    </children>
+</AnchorPane>
